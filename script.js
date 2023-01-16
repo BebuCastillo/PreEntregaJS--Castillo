@@ -22,27 +22,35 @@ if (usuario == usuarioReg && password == passwordReg) {
 }
 }
 
-/*Selección de cervezas para comprar*/
-let costoBlondie = 550
-let costoIpa = 800
-let costoHoney = 650
-let costoScottish = 600
+function cerveza(nombre, color, precio) {
+    this.nombre = nombre;
+    this.color = color;
+    this.precio = precio;
+}
+const blondie = new cerveza("Blondie", "Rubia", 550);
+const ipa = new cerveza("Ipa", "Rubia", 800);
+const honey = new cerveza("Honey", "Rubia", 650);
+const scottish = new cerveza("Scottish", "Roja", 600);
 
-let cerveza = "Consulte del menu el costo de la cerveza a comprar digitando su número: \n1.- Blondie \n2.- Ipa \n3.- Honey \n4.- Scottish \n5.- COMPRAR"
-let opcion = Number(prompt(cerveza))
+function infoCerveza(cerveza) {
+    return cerveza.nombre + ": Cerveza " + cerveza.color + " a un costo de $" + cerveza.precio
+}
+
+let consulta = "Consulte del menu la información de la cerveza a comprar: \n1.- Blondie \n2.- Ipa \n3.- Honey \n4.- Scottish \n5.- COMPRAR"
+let opcion = Number(prompt(consulta))
 while (opcion != 5) {
     if (opcion == 1 ) {
-    alert("El costo de la Blondie es: $"+ costoBlondie)
+    alert(infoCerveza(blondie))
 } else if (opcion == 2 ) {
-    alert("El costo de la Ipa es: $"+ costoIpa)
+    alert(infoCerveza(ipa))
 } else if (opcion == 3 ) {
-    alert("El costo de la Honey es: $"+ costoHoney)
+    alert(infoCerveza(honey))
 } else if (opcion == 4 ) {
-    alert("El costo de la Scottish es: $"+ costoScottish)
+    alert(infoCerveza(scottish))
 } else {
     alert("Opción incorrecta")
 }
-opcion = prompt(cerveza)
+opcion = prompt(consulta)
 }
 
 
