@@ -1,4 +1,4 @@
-/* Inicio de Sesión*/
+/* Inicio de Sesión
 
 alert("Bienvenido al portal de productos. \nInicie sesión para continuar")
 let usuarioReg = "Alejandro"
@@ -20,7 +20,7 @@ if (usuario == usuarioReg && password == passwordReg) {
     alert("Buena suerte y hasta luego")
     }
 }
-}
+} */
 
 function cerveza(nombre, color, precio) {
     this.nombre = nombre;
@@ -48,15 +48,19 @@ while (opcion != 5) {
 } else if (opcion == 4 ) {
     alert(infoCerveza(scottish))
 } else {
-    alert("Opción incorrecta")
+    alert("Opción incorrecta. Seleccione del 1 al 5")
 }
 opcion = prompt(consulta)
 }
 
-
 /*Compra de cervezas*/
 
-let estilo = "Seleccione el estilo a comprar: \n1.- Blondie \n2.- Ipa \n3.- Honey \n4.- Scottish \n5.- Finalizar"
+let costoBlondie = 550
+let costoIpa = 800
+let costoHoney = 650
+let costoScottish = 600
+
+let estilo = prompt("Seleccione el estilo a comprar: \n1.- Blondie \n2.- Ipa \n3.- Honey \n4.- Scottish \n5.- Finalizar")
 let cantidad = Number(prompt("Cantidades:"))
 let opcion2 = Number(prompt(estilo))
 while (opcion2 != 5) {
@@ -73,3 +77,5 @@ while (opcion2 != 5) {
 }
 opcion2 = prompt(estilo)
 }
+
+let salida = "Gracias, vuelva pronto"
